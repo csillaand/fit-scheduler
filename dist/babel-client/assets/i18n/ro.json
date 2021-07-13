@@ -1,0 +1,58 @@
+{
+  "navbar": {
+    "reports": "Rapoarte",
+    "transactions": "Tranzactii",
+    "contracts": "Contracte",
+    "invoices": "Facturi",
+    "settings": "Setari",
+    "projects": "Proiecte",
+    "createNewProject": "Creaza Proiect Nou",
+    "logOut": "Log out",
+    "logIn": "Log in"
+  },
+  "contracts": {
+    "number": "Numar",
+    "state": "Stadiu",
+    "project": "Proiect",
+    "select_project": "Alege proiect",
+    "partner": "Partener",
+    "add_partner": "Adauga partener",
+    "select_partner": "Alege partener",
+    "is_annex": "Conexiune cu un alt contract",
+    "signing_date": "Data semnarii",
+    "closure_date": "Data finalizarii",
+    "related_project": "Proiect aferent",
+    "due_date": "Termen limita",
+    "stages": "Etape",
+    "value": "Valoare",
+    "actions": "Actiuni",
+    "whole_contract": "Intreg contractul",
+    "add_contract": "Adaugare contract",
+    "update_contract": "Modificare contract",
+    "select": "- Alege -",
+    "stage": {
+      "name": "Denumire etapei",
+      "deadline": "Termen limita",
+      "net_value": "Valoare fara TVA",
+      "vat_rate": "Rata TVA",
+      "vat_value": "Valoare TVA",
+      "total_rate": "Valoare totala",
+      "add_another": "Mai adauga o etapa"
+    },
+    "partner_type": {
+      "provider": "Ca si furnizor",
+      "customer": "Ca si client"
+    },
+    "states": {
+      "ongoing": "In derulare",
+      "completed": "Terminat"
+    }
+  },
+  "forms": {
+    "save": "Salveaza",
+    "cancel": "Anuleaza",
+    "search": "Cautare",
+    "submit_search": "Cauta"
+  }
+}
+  

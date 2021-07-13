@@ -1,0 +1,13 @@
+{
+  "navbar": {
+    "reports": "Rapoarte",
+    "tranzactions": "Tranzactii",
+    "contracts": "Contracte",
+    "invoices": "Facturi",
+    "settings": "Setari",
+    "projects": "Proiecte",
+    "createNewProject": "Creaza Proiect Nou",
+    "logOut": "Log out"
+  }
+}
+  
