@@ -1,15 +1,15 @@
-import { Component } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
+import { Component } from "@angular/core";
+import { TranslateService } from "@ngx-translate/core";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.sass']
+    selector: "app-root",
+    templateUrl: "./app.component.html",
+    styleUrls: ["./app.component.sass"],
 })
 export class AppComponent {
-  title = 'babel-client';
+    title = "client";
 
-  constructor(private translate: TranslateService) {
-    translate.setDefaultLang('ro');
-  }
+    constructor(private translate: TranslateService) {
+        translate.setDefaultLang('ro');
+    }
 }

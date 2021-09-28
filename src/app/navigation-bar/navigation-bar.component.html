@@ -8,34 +8,11 @@
     <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse flex-row-reverse">
         <ul class="navbar-nav text-right">
             <li class="nav-item active">
-                <a class="nav-link" [routerLink]="'.'" (click)="isMenuCollapsed = true">{{ 'navbar.reports' | translate }}</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" [routerLink]="'.'" (click)="isMenuCollapsed = true">{{ 'navbar.tranzactions' | translate }}</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" [routerLink]="'.'" (click)="isMenuCollapsed = true">{{ 'navbar.contracts' | translate }}</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" [routerLink]="'.'" (click)="isMenuCollapsed = true">{{ 'navbar.invoices' | translate }}</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" [routerLink]="'.'" (click)="isMenuCollapsed = true">{{ 'navbar.settings' | translate }}</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" [routerLink]="'.'" (click)="isMenuCollapsed = true">{{ 'navbar.projects' | translate }}</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" [routerLink]="'.'" (click)="isMenuCollapsed = true">{{ 'navbar.createNewProject' | translate }}</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" [routerLink]="'.'" (click)="isMenuCollapsed = true">
-                    <fa-icon [icon]="['far', 'user-circle']"></fa-icon>
-                </a>
+                <a class="nav-link" [routerLink]="'.'" (click)="isMenuCollapsed = true">{{ 'navbar.navbar_item' | translate }}</a>
             </li>
             <li class="nav-item">
                 <button type="button" class="btn btn-dark">
-                    <a class="nav-link p-0 text-white" [routerLink]="'.'" (click)="isMenuCollapsed = true">{{ 'navbar.logOut' | translate }}</a>
+                    <a class="nav-link p-0 text-white" [routerLink]="'.'" (click)="isMenuCollapsed = true">{{ 'navbar.log_out' | translate }}</a>
                 </button>
             </li>
         </ul>
