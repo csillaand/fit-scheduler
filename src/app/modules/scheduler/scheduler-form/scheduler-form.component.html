@@ -1,0 +1,64 @@
+<div class="scheduler-form">
+    <mat-horizontal-stepper>
+        <mat-step [stepControl]="dayOneFormGroup">
+            <ng-template matStepLabel>Luni</ng-template>
+            <app-scheduler-form-elements [days]="dayOneFormGroup"
+                                        (values)="addItem($event)" 
+                                        [nextDay]="'Marti'">
+            </app-scheduler-form-elements>
+        </mat-step>
+        <mat-step [stepControl]="dayTwoFormGroup">
+            <ng-template matStepLabel>Marti</ng-template>
+            <app-scheduler-form-elements [days]="dayTwoFormGroup"
+                                        (values)="addItem($event)" 
+                                        [previousDay]="'Luni'"
+                                        [nextDay]="'Miercuri'">
+            </app-scheduler-form-elements>
+        </mat-step>
+        <mat-step [stepControl]="dayThreeFormGroup">
+            <ng-template matStepLabel>Miercuri</ng-template>
+            <app-scheduler-form-elements [days]="dayThreeFormGroup"
+                                        (values)="addItem($event)" 
+                                        [previousDay]="'Marti'"
+                                        [nextDay]="'Joi'">
+            </app-scheduler-form-elements>
+        </mat-step>
+        <mat-step [stepControl]="dayFourFormGroup">
+            <ng-template matStepLabel>Joi</ng-template>
+            <app-scheduler-form-elements [days]="dayFourFormGroup"
+                                        (values)="addItem($event)" 
+                                        [previousDay]="'Miercuri'"
+                                        [nextDay]="'Vineri'">
+            </app-scheduler-form-elements>
+        </mat-step>
+        <mat-step [stepControl]="dayFiveFormGroup">
+            <ng-template matStepLabel>Vineri</ng-template>
+            <app-scheduler-form-elements [days]="dayFiveFormGroup"
+                                        (values)="addItem($event)" 
+                                        [previousDay]="'Joi'"
+                                        [nextDay]="'Rezumat'">
+            </app-scheduler-form-elements>
+        </mat-step>
+        <mat-step>
+            <ng-template matStepLabel>Rezumat</ng-template>
+            <ul>
+                <li *ngFor="let item of items; let i = index">
+                    {{ displayDayOfWeek(i) }}
+                    <div class="pl-2">
+                        {{ item.morningFrom }}
+                        <ng-container *ngIf="item.morningTo"> - </ng-container>
+                        {{ item.morningTo }} {{ item.morningActivityType }}
+                    </div>
+                    <div class="pl-2">
+                        {{ item.eveningFrom }}
+                        <ng-container *ngIf="item.eveningTo"> - </ng-container>
+                        {{ item.eveningTo }} {{ item.eveningActivityType }}
+                    </div>
+                </li>
+            </ul>
+            <div>
+                <button mat-button matStepperPrevious>Vineri</button>
+            </div>
+        </mat-step>
+    </mat-horizontal-stepper>
+</div>

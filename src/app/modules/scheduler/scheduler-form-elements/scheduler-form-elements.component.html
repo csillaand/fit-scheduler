@@ -1,0 +1,68 @@
+<form [formGroup]="form">
+    <div class="activity-container">
+        <p>Dimineata</p>
+        <div class="row align-items-center">
+            <label class="m-0 col-1">Activitate</label>
+            <ng-select id="activityType"
+                    formControlName="morningActivityType"
+                    placeholder="Selecteaza o activitate"
+                    class="col-3">
+                <ng-container *ngFor="let activityType of activityTypeMap | 
+                            keyvalue">
+                    <ng-option [value]="activityType.value">
+                        {{ activityType.value }}
+                    </ng-option>
+                </ng-container>
+            </ng-select>
+        </div>
+        <div class="row align-items-center">
+            <label class="m-0 col-1">De la</label>
+            <div class="ngx-timepicker-field-example">
+                <ngx-timepicker-field [min]="'00:00 am'" [max]="'11:59 am'" formControlName="morningFrom"></ngx-timepicker-field>
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <label class="m-0 col-1">Pana la</label>
+            <div class="ngx-timepicker-field-example">
+                <ngx-timepicker-field [min]="'00:00 am'" [max]="'11:59 am'" formControlName="morningTo"></ngx-timepicker-field>
+            </div>
+        </div>
+    </div>
+    <div class="activity-container">
+        <p>Seara</p>
+        <div class="row align-items-center">
+            <label class="m-0 col-1">Activitate</label>
+            <ng-select id="activityType"
+                    formControlName="morningActivityType"
+                    placeholder="Selecteaza o activitate"
+                    class="col-3">
+                <ng-container *ngFor="let activityType of activityTypeMap | 
+                            keyvalue">
+                    <ng-option [value]="activityType.value">
+                        {{ activityType.value }}
+                    </ng-option>
+                </ng-container>
+            </ng-select>
+        </div>
+        <div class="row align-items-center">
+            <label class="m-0 col-1">De la</label>
+            <div class="ngx-timepicker-field-example">
+                <ngx-timepicker-field [min]="'12:00 pm'" [max]="'23:59 pm'" formControlName="morningFrom"></ngx-timepicker-field>
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <label class="m-0 col-1">Pana la</label>
+            <div class="ngx-timepicker-field-example">
+                <ngx-timepicker-field [min]="'12:00 pm'" [max]="'23:59 pm'" formControlName="morningTo"></ngx-timepicker-field>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-between">
+        <div>
+            <button *ngIf="previousDay" mat-button matStepperPrevious>{{ previousDay }}</button>
+        </div>
+        <div>
+            <button *ngIf="nextDay" mat-button matStepperNext (click)="onNext(form.value)">{{ nextDay }}</button>
+        </div>
+    </div>
+</form>
