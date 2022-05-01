@@ -1,25 +1,18 @@
-import { ContactModule } from './modules/contact/contact.module';
-import { DashboardModule } from './modules/dashboard/dashboard.module';
-import { ContactUsComponent } from './modules/contact/contact-us/contact-us.component';
-import { HomePageComponent } from './modules/dashboard/home-page/home-page.component';
+import { SchedulerModule } from './modules/scheduler/scheduler.module';
+import { SchedulerFormComponent } from './modules/scheduler/scheduler-form/scheduler-form.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
     {
         path: '',
-        component: HomePageComponent
-    },
-    {
-        path: 'contact-us',
-        component: ContactUsComponent
+        component: SchedulerFormComponent
     }
 ];
 
 @NgModule({
     imports: [
-        DashboardModule,
-        ContactModule,
+        SchedulerModule,
         RouterModule.forRoot(routes)
     ],
     exports: [RouterModule]

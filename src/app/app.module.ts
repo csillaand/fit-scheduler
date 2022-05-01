@@ -5,14 +5,12 @@ import { HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { IconsModule } from './icons/icons.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    NavigationBarComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +18,7 @@ import { IconsModule } from './icons/icons.module';
     NgbModule,
     IconsModule,
     HttpClientModule,
-    TranslateModule.forRoot()
+    TranslateModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

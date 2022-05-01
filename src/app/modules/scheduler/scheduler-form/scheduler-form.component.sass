@@ -1,0 +1,40 @@
+.scheduler-form
+    font-size: 14px
+    ::ng-deep .mat-horizontal-content-container
+        overflow: inherit
+        border: 2px solid
+        border-radius: 5px
+        padding: 15px
+        position: relative
+        margin: 50px 0
+        button.mat-focus-indicator
+            border: 2px solid
+    ::ng-deep .mat-step-icon,
+    ::ng-deep .mat-stepper-horizontal-line
+        display: none
+    ::ng-deep .mat-horizontal-stepper-header-container
+        position: absolute
+        top: 3px
+        left: 100px
+    ::ng-deep .cdk-program-focused
+        background-color: transparent
+    ::ng-deep .mat-step-header
+        padding: 0
+        &:hover
+            background-color: transparent
+        .mat-step-label-active
+            border: 2px solid
+            border-top-right-radius: 10px
+            padding: 0 5px
+            background-color: #bebebe
+        .mat-step-label-selected
+            border-bottom: none
+            background-color: #fff
+            padding: 2px 5px
+            z-index: 2
+    ul
+        list-style: none
+        padding: 0
+        li
+            padding: 5px 0
+    
